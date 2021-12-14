@@ -1,0 +1,5 @@
+.idea/
+test_*
+tmp/
+output/
+input/
