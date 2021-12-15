@@ -8,7 +8,7 @@ mkdir ./input
 cp frame-img-custom.sh ./input/
 
 # 2. add myself app (主要修改此处)
-./java/init.sh
+./rust/init.sh
 
 # 3. clear output
 rm -rf ./output

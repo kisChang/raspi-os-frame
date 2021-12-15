@@ -7,3 +7,4 @@ Features:
 * WiFi support
 * MIRROR support
 * Java App support
+* Rust App support
