@@ -30,11 +30,12 @@ cp ${ROOTFS_PATH}/etc/network/interfaces.alpine-builder ${DATAFS_PATH}/etc/netwo
 
 cat >> ${DATAFS_PATH}/etc/network/wpa_supplicant.conf <<EOF
 country=CN
-network={
-    ssid="wifissid"
-    psk="wifipasswd"
-}
 EOF
+#可以按这种方式添加默认wifi
+#network={
+#    ssid="wifissid"
+#    psk="wifipasswd"
+#}
 #issue 暂不支持
 #chroot_exec sh -c "wpa_passphrase wifissid wifipasswd > /data/etc/network/wpa_supplicant.conf"
 
@@ -47,7 +48,3 @@ chroot_exec apk add bluez bluez-deprecated
 sed -i '/bcm43xx/s/^#//' ${ROOTFS_PATH}/etc/mdev.conf
 
 # ---------------------- BASE OS END ----------------------
-#1. add jre
-#chroot_exec apk add openjdk8-jre
-
-echo 'run custom success'

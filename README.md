@@ -6,3 +6,4 @@ Features:
 * console serial ssh support 
 * WiFi support
 * MIRROR support
+* Java App support

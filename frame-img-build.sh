@@ -7,12 +7,14 @@ rm -rf ./input
 mkdir ./input
 cp frame-img-custom.sh ./input/
 
+# 2. add myself app (主要修改此处)
+./java/init.sh
 
-# 2. clear output
+# 3. clear output
 rm -rf ./output
 mkdir ./output
 
-# 3. build firmware
+# 4. build firmware
 # ALPINE_MIRROR、RPI_FIRMWARE_GIT 用了国内镜像服务加速
 # SIZE_ROOT_FS 调整文件系统大小，存放JRE
 # DEFAULT_KERNEL_MODULES 增加brcmfmac等wifi模块
